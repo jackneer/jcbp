@@ -1,9 +1,15 @@
 #include <iostream>
 #include "test.h"
+#include "crow_all.h"
 
-int main() {
-	say_hello();
-	say_bye();
+int main()
+{
+    crow::SimpleApp app;
 
-	return 0;
+    CROW_ROUTE(app, "/")([](){
+        return "Hello world";
+    });
+
+    // app.loglevel(crow::LogLevel::DEBUG);
+    app.port(18080).multithreaded().run();
 }

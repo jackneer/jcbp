@@ -5,6 +5,7 @@ a boilerplate project for c++ programming.
 ## Requirements
 
 * c++ compiller, g++ for example
+* make
 * cmake
 
 ## Downlaod
